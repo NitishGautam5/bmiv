@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<STYle>
+    body,html{
+    height: 100%;
+    width: 100%;
+    background-color: aquamarine;
+
+}
+.father
+{
+
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.child
+{
+    height: 80%;
+    width: 70%;
+    background-color:rgb(143, 139, 139);
+}
+</STYle>
+
+
+<body>
+    
+    <div class="father">
+        <div class="child">
+            <p>enter your height in CM</p>
+            <input type="number" class="height" placeholder="enter your height">
+            <p>enter your weight in KG</p>
+            <input type="number" class="weight" placeholder="enter your weight">
+            <p></p>
+            <button class="calcu">calculate</button>
+            <p></p>
+            <input type="number" id="calc">
+            <h4>RULE</h4>
+            <p >BMI UNDER 18.6 UNDERWEIGHT</p>
+            <p >BMI 18.6 TO 23.8 NORMALWEIGHT</p>
+            <p >BMI OVER 24.9 OVERWEIGHT</p>
+        </div>
+    </div>
+    <P>MADE BY NITISH</P>
+ <script>
+    let height=document.querySelector(".height")
+let weight=document.querySelector(".weight")
+let result=document.querySelector("#calc")
+let calculate=document.querySelector(".calcu")
+calculate.addEventListener("click",function(){
+    let lamba = +height.value/100
+    let bhar = +weight.value
+   
+    let final=+(bhar/(lamba*lamba))
+    result.value=(final.toFixed(2))
+    
+})
+
+ </script>   
+</body>
+</html>
